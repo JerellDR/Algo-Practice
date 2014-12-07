@@ -16,18 +16,39 @@ public class InsertionSortMain {
         doSort(sortObject, toSort.length);
 
         System.out.println("Sorted List: " + sortObject);
+        //
+        String[] toReverseSort = {"i","n","s","e","r","t","i","o","n","s","o","r","t"};
+
+        StringWrapper reverseSortObject = new StringWrapper();
+
+        reverseSortObject.toSort = toReverseSort;
+
+        System.out.println("Unsorted List: " + reverseSortObject);
+
+        doReverseSort(reverseSortObject, toSort.length);
+
+        System.out.println("Sorted List: " + reverseSortObject);
     }
 
 
 
     public static void doSort(StringWrapper sortObject, int n) {
-        String[] toSort = sortObject.toSort;
         int i, j;
 
         for (i = 1; i < n; i++) {
             j = i;
             while((j > 0) && (sortObject.toSort[j].compareTo(sortObject.toSort[j-1]) < 0)){
               swap(sortObject.toSort, j, j-1);
+                j = j-1;
+            }
+        }
+    }
+    public static void doReverseSort(StringWrapper sortObject, int n) {
+        int i, j;
+        for (i = 1; i < n; i++) {
+            j = i;
+            while((j > 0) && (sortObject.toSort[j].compareTo(sortObject.toSort[j-1])> 0)){
+                swap(sortObject.toSort, j, j-1);
                 j = j-1;
             }
         }
