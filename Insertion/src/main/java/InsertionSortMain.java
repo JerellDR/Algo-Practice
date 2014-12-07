@@ -7,7 +7,7 @@ public class InsertionSortMain {
     public static void main(String [] args) {
         String[] toSort = {"i","n","s","e","r","t","i","o","n","s","o","r","t"};
 
-        InserstionSortClass sortObject = new InserstionSortClass();
+        StringWrapper sortObject = new StringWrapper();
 
         sortObject.toSort = toSort;
 
@@ -20,7 +20,7 @@ public class InsertionSortMain {
 
 
 
-    public static void doSort(InserstionSortClass sortObject, int n) {
+    public static void doSort(StringWrapper sortObject, int n) {
         String[] toSort = sortObject.toSort;
         int i, j;
 

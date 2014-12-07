@@ -2,7 +2,7 @@
  * Created by JerellDR on 12/7/2014.
  * On 12/7/2014
  */
-public class InserstionSortClass {
+public class StringWrapper {
     private static final StringBuilder sBuilder = new StringBuilder();
 
     public String[] toSort;
